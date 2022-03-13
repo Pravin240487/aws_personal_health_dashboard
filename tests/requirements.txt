@@ -1,0 +1,6 @@
+pytest
+boto3
+retrying
+python_terraform
+git+https://github.optum.com/CommercialCloud-EAC/python-scripts.git#subdirectory=terraformrunner
+git+https://github.optum.com/CommercialCloud-EAC/terratestpy.git

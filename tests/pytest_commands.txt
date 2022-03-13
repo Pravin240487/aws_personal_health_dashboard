@@ -1,0 +1,10 @@
+python3 -m venv pytestsvenv
+. pytestsvenv/bin/activate
+python3 -m pip install -r requirements.txt
+export AWS_PROFILE=saml
+#
+#run terraform init, terraform apply, and pytest
+#
+# Execute tests with pytest - we cannot examine pytest.xml because we are in a python virtual environment that gets cleaned up. not seeing a way to persist the pytest.xml file outside the virtual environment
+python3 -m pytest -s --durations=0 --junitxml pytest.xml
+deactivate
